@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Marks</title>
+</head>
+<body>
+
+<h1>Welcome {{ username }}</h1>
+
+<h2>Student Marks Report</h2>
+
+<table border="1">
+
+<tr>
+    <th>Subject</th>
+    <th>Marks</th>
+    <th>Result</th>
+</tr>
+
+{% for subject, data in results.items() %}
+
+<tr>
+    <td>{{ subject }}</td>
+    <td>{{ data[0] }}</td>
+    <td>{{ data[1] }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>
